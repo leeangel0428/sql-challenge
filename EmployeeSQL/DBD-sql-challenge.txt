@@ -1,0 +1,38 @@
+Angel's ERD code for challenge 9 aka sql-challenge using DBD
+
+departments
+-
+dept_no VARCHAR(30) PK
+dept_name VARCHAR(30)
+
+dept_emp
+-
+emp_no INT PK FK - employees.emp_no
+dept_no VARCHAR(30) FK >- departments.dept_no
+
+dept_manager
+-
+dept_no VARCHAR(30) FK >- departments.dept_no
+emp_no VARCHAR(30) PK
+
+employees
+-
+emp_no INT PK
+emp_title_id VARCHAR(30) FK >- titles.title_id
+birth_date VARCHAR(30)
+first_name VARCHAR(30)
+last_name VARCHAR(30)
+sex VARCHAR(30)
+hire_date VARCHAR(30)
+
+
+salaries
+-
+emp_no INT PK FK >- dept_manager.emp_no
+salary INT 
+
+
+titles
+-
+title_id VARCHAR(30) PK
+title VARCHAR(30)
