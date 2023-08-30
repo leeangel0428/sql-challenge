@@ -1,4 +1,4 @@
---SQL queries used to create/import/alter data provided for sql-challenge
+--SQL schema used to create/import/alter data provided for sql-challenge
 
 --dropping tables if they exist before creating tables
 
