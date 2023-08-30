@@ -1,3 +1,14 @@
+--SQL queries used to create/import/alter data provided for sql-challenge
+
+--dropping tables if they exist before creating tables
+
+DROP TABLE IF EXISTS departments;
+DROP TABLE IF EXISTS dept_emp;
+DROP TABLE IF EXISTS dept_manager;
+DROP TABLE IF EXISTS employees;
+DROP TABLE IF EXISTS salaries;
+DROP TABLE IF EXISTS titles;
+
 -- Create new table for departments data
 CREATE TABLE departments (
     dept_no VARCHAR(30) NOT NULL,
@@ -17,7 +28,7 @@ CREATE TABLE dept_emp (
     dept_no VARCHAR(30) NOT NULL
 );
 
---import departments data into the dept_emp table (done manually)
+--import dept_emp data into the dept_emp table (done manually)
 --then check to make sure it looks right
 
 SELECT *
@@ -29,7 +40,7 @@ CREATE TABLE dept_manager (
     emp_no INT NOT NULL
 );
 
---import departments data into the dept_manager table (done manually)
+--import dept_manager data into the dept_manager table (done manually)
 --then check to make sure it looks right
 
 SELECT *
@@ -46,7 +57,7 @@ CREATE TABLE employees (
     hire_date DATE NOT NULL
 );
 
---import departments data into the employees table (done manually)
+--import employees data into the employees table (done manually)
 --then check to make sure it looks right
 
 SELECT *
@@ -58,7 +69,7 @@ CREATE TABLE salaries (
     salary INT NOT NULL
 );
 
---import departments data into the salaries table (done manually)
+--import salaries data into the salaries table (done manually)
 --then check to make sure it looks right
 
 SELECT *
@@ -70,8 +81,35 @@ CREATE TABLE title (
     title VARCHAR(30) NOT NULL
 );
 
---import departments data into the titles table (done manually)
+--import titles data into the titles table (done manually)
 --then check to make sure it looks right
 
 SELECT *
 FROM title;
+
+--fixing my mistake and renaming the "title" table to "titles" table
+
+ALTER TABLE title 
+	RENAME TO titles;
+
+-- alter tables created to add primary and foreign keys
+
+ALTER TABLE departments ADD PRIMARY KEY (dept_no);
+
+--alter dept_emp table to add PK composite key and FK
+ALTER TABLE dept_emp ADD PRIMARY KEY (emp_no, dept_no)
+ALTER TABLE dept_emp ADD FOREIGN KEY (dept_no)
+	REFERENCES departments(dept_no);
+	
+--alter dept_manager table to add PK and FK
+ALTER TABLE dept_manager ADD PRIMARY KEY (emp_no)
+ALTER TABLE dept_manager ADD FOREIGN KEY (dept_no)
+	REFERENCES departments(dept_no);
+	
+--alter employees table to add PK
+ALTER TABLE employees ADD PRIMARY KEY (emp_no)
+
+--alter salaries table and add PK 
+ALTER TABLE salaries ADD PRIMARY KEY (emp_no)
+
+
