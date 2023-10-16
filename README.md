@@ -15,3 +15,9 @@ Curry, C. (2022, December 24). SQL server 15- composite key [Video]. YouTube. ht
 Lucid Software. (2017, July 14). Entity relationship diagram (erd) tutorial- part 2 [Video]. YouTube. https://www.youtube.com/watch?v=-CuY5ADwn24&ab_channel=LucidSoftware
 
 Tech on the Net. (n.d). PostgreSQL: alter table statement. Retreived August 29th, 2023, from https://www.techonthenet.com/postgresql/tables/alter_table.php#:~:text=To%20rename%20a%20table%2C%20the,The%20table%20to%20rename.
+
+### Grade:
+
+![Screenshot 2023-10-15 220402](https://github.com/leeangel0428/Excel_analysis/assets/137225965/fb3dfe4e-55b6-4dd8-8a3e-df403c1d2745)
+
+![Screenshot 2023-10-15 220409](https://github.com/leeangel0428/Excel_analysis/assets/137225965/8995ba24-f3ff-4f9e-9986-1f0472556257)
